@@ -5,12 +5,11 @@ import axios from 'axios';
 const app = express();
 const port = 4000;
 
-dotenv.config()
-app.use(cors({origin: 'http://localhost:3000'}))
+if (process.env.NODE === "development")
+	// adds dotenv in dev
+	dotenv.config()
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
+app.use(cors({origin: 'http://localhost:3000'}))
 
 app.get('/api/listings-latest', async (req, res) => {
   	const requestOptions = {

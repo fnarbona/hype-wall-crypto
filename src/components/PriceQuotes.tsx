@@ -6,7 +6,7 @@ import { useState } from "react";
 
 export const PriceQuotes = () => {
     const [filter, setFilter] = useState('percent_change_24h')
-    const priceQuotes = usePriceQuotes(10000000)
+    const priceQuotes = usePriceQuotes(100000)
 
     return (
         <Center flexDirection={'column'}>
