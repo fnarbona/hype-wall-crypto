@@ -28,7 +28,7 @@ app.get('/api/listings-latest', async (req, res) => {
 	.catch(error => console.log('error', error));
 	
 	res.send(JSON.stringify(response))
-}).listen(process.env.PORT || 5000)
+})
 app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`);
 });
