@@ -9,6 +9,7 @@ if (process.env.NODE === "development")
 	// adds dotenv in dev
 	dotenv.config()
 
+app.use(express.static(path.join(__dirname, '..', 'build')));
 app.use(cors({origin: 'http://localhost:3000'}))
 
 app.get('/api/listings-latest', async (req, res) => {
