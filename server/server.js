@@ -3,7 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import axios from 'axios';
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000
 
 if (process.env.NODE === "development")
 	// adds dotenv in dev
@@ -28,7 +28,7 @@ app.get('/api/listings-latest', async (req, res) => {
 	.catch(error => console.log('error', error));
 	
 	res.send(JSON.stringify(response))
-})
+}).listen(process.env.PORT || 5000)
 app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`);
 });
