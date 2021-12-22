@@ -32,7 +32,7 @@ export const PriceQuotesFilter = ({filter, setFilter}: any) => {
     return (
         <Wrap justify='center' h="32" w="60%" wrap={"wrap"}>
             {filterOptions.map(({label, value}) => (
-                <WrapItem>
+                <WrapItem key={label}>
                     <Button
                         key={label}
                         w="14" 

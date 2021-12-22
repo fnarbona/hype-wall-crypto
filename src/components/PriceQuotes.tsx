@@ -1,7 +1,7 @@
 import { Center, Stack, Wrap } from "@chakra-ui/react"
 import { usePriceQuotes } from "../utils/hooks";
 import { PriceQuoteItem } from "./PriceQuoteItem";
-import { PriceQuotesFilter } from './PriceQuotesFilter';
+import { PriceQuotesFilter } from "./PriceQuotesFilter";
 import { useState } from "react";
 
 export const PriceQuotes = () => {
