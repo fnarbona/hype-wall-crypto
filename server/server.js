@@ -11,7 +11,9 @@ if (process.env.NODE === "development")
 	dotenv.config()
 
 app.use(express.static(path.join('..', 'build')));
-app.use(cors({origin: 'http://localhost:3000'}))
+app.use(cors({
+	origin: ['http://localhost:3000', 'https://hype-wall-crypto.herokuapp.com']
+}))
 
 app.get('/api/listings-latest', async (req, res) => {
   	const requestOptions = {
